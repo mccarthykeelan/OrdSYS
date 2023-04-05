@@ -1,36 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
-namespace OrdSYS
+namespace OrdSYS.Models
 {
-    class ProductModel
+    public class ProductModel
     {
-        private int product_id;
-        private String name;
-        private int quantity;
-        private decimal price;
-        private DateTime reg_date;
-        private String status;
-        private String description;
+        // Fields
+        private int _id;
+        private string _name;
+        private decimal _price;
+        private int _stock;
+        private string _status;
 
-        public ProductModel(int product_id, string name, int quantity, decimal price, DateTime reg_date, string status, string description)
-        {
-            this.product_id = product_id;
-            this.name = name;
-            this.quantity = quantity;
-            this.price = price;
-            this.reg_date = reg_date;
-            this.status = status;
-            this.description = description;
-        }
-
-        public int Product_id { get => product_id; set => product_id = value; }
-        public string Name { get => name; set => name = value; }
-        public int Quantity { get => quantity; set => quantity = value; }
-        public decimal Price { get => price; set => price = value; }
-        public DateTime Reg_date { get => reg_date; set => reg_date = value; }
-        public string Status { get => status; set => status = value; }
-        public string Description { get => description; set => description = value; }
+        // Properties - Validations
+        [DisplayName("Product ID")]
+        [Required(ErrorMessage = "Product ID is required")]
+        public int Id { get => _id; set => _id = value; }
+        [DisplayName("Product Name")]
+        [Required(ErrorMessage = "Product Name is required")]
+        public string Name { get => _name; set => _name = value; }
+        [DisplayName("Product Price")]
+        [Required(ErrorMessage = "Product Price is required")]
+        public decimal Price { get => _price; set => _price = value; }
+        [DisplayName("Product Stock")]
+        [Required(ErrorMessage = "Product Stock is required")]
+        public int Stock { get => _stock; set => _stock = value; }
+        [DisplayName("Product Status")]
+        [Required(ErrorMessage = "Product Status is required")]
+        public string Status { get => _status; set => _status = value; }
     }
 }
