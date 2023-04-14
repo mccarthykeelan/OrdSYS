@@ -17,7 +17,7 @@ namespace OrdSYS
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmOrderMnu());
+            Application.Run(new frmMainMenu());
         }
     }
 }

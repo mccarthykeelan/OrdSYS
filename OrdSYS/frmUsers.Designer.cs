@@ -1,7 +1,7 @@
 ﻿
 namespace OrdSYS
 {
-    partial class frmShipmentMnu
+    partial class frmUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -55,7 +55,7 @@ namespace OrdSYS
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2074, 122);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 1;
             // 
             // label2
             // 
@@ -63,9 +63,9 @@ namespace OrdSYS
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(12, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(282, 72);
+            this.label2.Size = new System.Drawing.Size(160, 72);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Shipments";
+            this.label2.Text = "Users";
             // 
             // tabControl1
             // 
@@ -77,7 +77,7 @@ namespace OrdSYS
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(2074, 913);
-            this.tabControl1.TabIndex = 3;
+            this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -93,8 +93,9 @@ namespace OrdSYS
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(2054, 845);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Search Shipments";
+            this.tabPage1.Text = "Search Users";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tabPage2
             // 
@@ -103,7 +104,7 @@ namespace OrdSYS
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(2054, 845);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Create Shipment";
+            this.tabPage2.Text = "Add User";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -156,9 +157,9 @@ namespace OrdSYS
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(14, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 62);
+            this.label1.Size = new System.Drawing.Size(302, 62);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Search Shipments:";
+            this.label1.Text = "Search Users:";
             // 
             // textBox1
             // 
@@ -189,18 +190,18 @@ namespace OrdSYS
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(2054, 845);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Update Shipment";
+            this.tabPage3.Text = "Update User";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // frmShipmentMnu
+            // frmUserMnu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2074, 1035);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            this.Name = "frmShipmentMnu";
-            this.Text = "frmShipmentMnu";
+            this.Name = "frmUserMnu";
+            this.Text = "frmUserMnu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

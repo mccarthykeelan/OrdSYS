@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace OrdSYS
 {
-    public partial class frmProductMnu : Form
+    public partial class frmUsers : Form
     {
-        public frmProductMnu()
+        public frmUsers()
         {
             InitializeComponent();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

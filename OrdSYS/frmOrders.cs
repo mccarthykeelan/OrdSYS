@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace OrdSYS
 {
-    public partial class frmShipmentMnu : Form
+    public partial class frmOrders : Form
     {
-        public frmShipmentMnu()
+        public frmOrders()
         {
             InitializeComponent();
         }
