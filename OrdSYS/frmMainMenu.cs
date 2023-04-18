@@ -23,7 +23,7 @@ namespace OrdSYS
             pnlMenu.Controls.Add(leftBorderBtn);
 
             this.Text = string.Empty;
-            this.ControlBox = false;
+            //this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
@@ -94,13 +94,13 @@ namespace OrdSYS
         private void btnProducts_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new frmProducts());
+            //OpenChildForm(new frmProducts());
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new frmOrders());
+            //OpenChildForm(new frmOrders());
         }
 
         private void btnStatements_Click(object sender, EventArgs e)
@@ -136,6 +136,16 @@ namespace OrdSYS
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color5);
+        }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
         }
     }
 }

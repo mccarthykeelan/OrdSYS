@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace OrdSYS
 {
-    public partial class frmProducts : Form
+    public partial class frmOrders : Form
     {
-        public frmProducts()
+        public frmOrders()
         {
             InitializeComponent();
+        }
+
+        private void tpSearchProducts_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
