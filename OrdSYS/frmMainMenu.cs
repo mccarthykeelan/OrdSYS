@@ -43,7 +43,7 @@ namespace OrdSYS
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-
+                
             }
         }
 
@@ -78,23 +78,12 @@ namespace OrdSYS
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+
             pnlDesktop.Controls.Add(childForm);
             pnlDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
             lblChildForm.Text = childForm.Text;
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            //OpenChildForm(new frmDashboard());
-        }
-
-        private void btnProducts_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color2);
-            //OpenChildForm(new frmProducts());
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
@@ -116,6 +105,7 @@ namespace OrdSYS
 
         private void picLogo_Click(object sender, EventArgs e)
         {
+            currentChildForm.Close();
             Reset();
         }
 
@@ -138,6 +128,18 @@ namespace OrdSYS
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new frmProducts());
+        }
+
+        private void btnOrders_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new frmProducts());
+        }
+
         private void btnUsers_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
@@ -146,6 +148,11 @@ namespace OrdSYS
         private void btnLogs_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
+        }
+
+        private void picLogo_Click_1(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace OrdSYS
 {
-    partial class frmOrders
+    partial class frmProducts
     {
         /// <summary>
         /// Required designer variable.
@@ -166,7 +166,7 @@ namespace OrdSYS
             tpAddProduct.Location = new System.Drawing.Point(10, 58);
             tpAddProduct.Name = "tpAddProduct";
             tpAddProduct.Padding = new System.Windows.Forms.Padding(3);
-            tpAddProduct.Size = new System.Drawing.Size(2054, 967);
+            tpAddProduct.Size = new System.Drawing.Size(2059, 967);
             tpAddProduct.TabIndex = 1;
             tpAddProduct.Text = "Add Product";
             tpAddProduct.UseVisualStyleBackColor = true;
@@ -175,19 +175,19 @@ namespace OrdSYS
             // 
             tpUpdateProduct.Location = new System.Drawing.Point(10, 58);
             tpUpdateProduct.Name = "tpUpdateProduct";
-            tpUpdateProduct.Size = new System.Drawing.Size(2054, 967);
+            tpUpdateProduct.Size = new System.Drawing.Size(2059, 967);
             tpUpdateProduct.TabIndex = 2;
             tpUpdateProduct.Text = "Update Product";
             tpUpdateProduct.UseVisualStyleBackColor = true;
             // 
-            // frmOrders
+            // frmProducts
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(2079, 1035);
             Controls.Add(tcProduct);
-            Name = "frmOrders";
-            Text = "frmProductMnu";
+            Name = "frmProducts";
+            Text = "Products";
             tcProduct.ResumeLayout(false);
             tpSearchProducts.ResumeLayout(false);
             tpSearchProducts.PerformLayout();

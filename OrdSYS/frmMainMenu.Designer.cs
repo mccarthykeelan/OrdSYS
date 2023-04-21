@@ -64,7 +64,7 @@
             pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             pnlMenu.Location = new System.Drawing.Point(0, 0);
             pnlMenu.Name = "pnlMenu";
-            pnlMenu.Size = new System.Drawing.Size(437, 978);
+            pnlMenu.Size = new System.Drawing.Size(437, 1117);
             pnlMenu.TabIndex = 0;
             // 
             // btnLogs
@@ -109,7 +109,7 @@
             btnExit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnExit.ForeColor = System.Drawing.Color.White;
             btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnExit.Location = new System.Drawing.Point(0, 870);
+            btnExit.Location = new System.Drawing.Point(0, 1009);
             btnExit.Name = "btnExit";
             btnExit.Size = new System.Drawing.Size(437, 108);
             btnExit.TabIndex = 5;
@@ -149,7 +149,7 @@
             btnOrders.Text = "Orders";
             btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnOrders.UseVisualStyleBackColor = true;
-            btnOrders.Click += btnProducts_Click;
+            btnOrders.Click += btnOrders_Click_1;
             // 
             // btnProducts
             // 
@@ -166,7 +166,7 @@
             btnProducts.Text = "Products";
             btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnProducts.UseVisualStyleBackColor = true;
-            btnProducts.Click += btnDashboard_Click;
+            btnProducts.Click += btnProducts_Click;
             // 
             // pnlLogo
             // 
@@ -202,6 +202,7 @@
             picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             picLogo.TabIndex = 1;
             picLogo.TabStop = false;
+            picLogo.Click += picLogo_Click_1;
             // 
             // pnlTitleBar
             // 
@@ -233,7 +234,7 @@
             pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             pnlDesktop.Location = new System.Drawing.Point(437, 126);
             pnlDesktop.Name = "pnlDesktop";
-            pnlDesktop.Size = new System.Drawing.Size(1423, 852);
+            pnlDesktop.Size = new System.Drawing.Size(1423, 991);
             pnlDesktop.TabIndex = 2;
             // 
             // picOrderSYS
@@ -242,7 +243,7 @@
             picOrderSYS.Image = Properties.Resources.OrderSYS;
             picOrderSYS.Location = new System.Drawing.Point(0, 0);
             picOrderSYS.Name = "picOrderSYS";
-            picOrderSYS.Size = new System.Drawing.Size(1423, 852);
+            picOrderSYS.Size = new System.Drawing.Size(1423, 991);
             picOrderSYS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             picOrderSYS.TabIndex = 0;
             picOrderSYS.TabStop = false;
@@ -251,7 +252,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1860, 978);
+            ClientSize = new System.Drawing.Size(1860, 1117);
             Controls.Add(pnlDesktop);
             Controls.Add(pnlTitleBar);
             Controls.Add(pnlMenu);
