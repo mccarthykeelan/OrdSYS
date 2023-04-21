@@ -6,10 +6,10 @@ namespace OrdSYS.Models
 {
     public interface IOrderRepository
     {
-        void Add(OrderModel orderModel);
-        void Edit(OrderModel orderModel);
+        void Add(OrderModel petModel);
+        void Edit(OrderModel petModel);
         void Delete(int id);
         IEnumerable<OrderModel> GetAll();
-        IEnumerable<OrderModel> GetByValue();//Searches
+        IEnumerable<OrderModel> GetByValue(string value);//Searches
     }
 }
