@@ -1,4 +1,5 @@
-﻿using OrdSYS.Models.Product;
+﻿using OrdSYS.Models.Order;
+using OrdSYS.Models.Product;
 using OrdSYS.Views.Product;
 using System;
 using System.Collections.Generic;
@@ -7,39 +8,39 @@ using System.Windows.Forms;
 
 namespace OrdSYS.Presenters
 {
-    public class ProductPresenter
+    public class OrderPresenter
     {
         // Private
         private IProductView _view;
         private IProductRepository _repository;
-        private BindingSource productsBindingSource;
-        private IEnumerable<ProductModel> productList;
+        private BindingSource ordersBindingSource;
+        private IEnumerable<OrderModel> orderList;
 
         // Constructor
-        public ProductPresenter(IProductView view, IProductRepository repository)
+        public OrderPresenter(IOrderView view, IOrderRepository repository)
         {
-            this.productsBindingSource = new BindingSource();
+            this.ordersBindingSource = new BindingSource();
             this._view = view;
             this._repository = repository;
             // Subscribe event handler methods to view events
-            this._view.SearchEvent += SearchProduct;
-            this._view.AddNewEvent += AddProduct;
-            this._view.EditEvent += LoadSelectedProductToEdit;
-            this._view.DeleteEvent += DeleteProduct;
-            this._view.SaveEvent += SaveProduct;
+            this._view.SearchEvent += SearchOrder;
+            this._view.AddNewEvent += AddOrder;
+            this._view.EditEvent += LoadSelectedOrderToEdit;
+            this._view.DeleteEvent += DeleteOrder;
+            this._view.SaveEvent += SaveOrder;
             this._view.CancelEvent += CancelAction;
             // Set the view's product list binding source
-            this._view.SetProductListBindingSource(productsBindingSource);
+            this._view.SetOrderListBindingSource(ordersBindingSource);
             // Load the product view
-            LoadAllProductList();
+            LoadAllOrdersList();
             // Show view
             this._view.Show();
         }
 
-        private void LoadAllProductList()
+        private void LoadAllOrderList()
         {
-            productList = _repository.GetAll();
-            productsBindingSource.DataSource = productList; // Set Data Source
+            orderList = _repository.GetAll();
+            ordersBindingSource.DataSource = orderList; // Set Data Source
         }
 
         private void CancelAction(object sender, EventArgs e)
@@ -47,14 +48,12 @@ namespace OrdSYS.Presenters
             CleanViewFields();
         }
 
-        private void SaveProduct(object sender, EventArgs e)
+        private void SaveOrder(object sender, EventArgs e)
         {
-            var model = new ProductModel();
-            model.Id = Convert.ToInt32(_view.ProductId);
-            model.Name = _view.ProductName;
-            model.Description = _view.ProductDescription;
-            model.Price = Convert.ToInt32(_view.ProductPrice);
-            model.Stock = Convert.ToInt32(_view.ProductStock);
+            var model = new OrderModel();
+            model.Id = Convert.ToInt32(_view.OrderId);
+            model.CustomerId = Convert.ToInt32(_view.CustomerID);
+            model.Date = System.DateTime.Now;
             model.Status = _view.ProductStatus;
             try
             {

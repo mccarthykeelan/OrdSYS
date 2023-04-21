@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OrdSYS.Views
+namespace OrdSYS.Views.Customer
 {
     public interface ICustomerView
     {

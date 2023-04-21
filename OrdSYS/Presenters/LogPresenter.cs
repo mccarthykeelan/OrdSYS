@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OrdSYS.Models
+namespace OrdSYS.Presenters
 {
-    internal interface IUserRepository
+    internal class LogPresenter
     {
     }
 }

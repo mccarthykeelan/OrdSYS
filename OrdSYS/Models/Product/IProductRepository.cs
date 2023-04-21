@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OrdSYS.Models
+namespace OrdSYS.Models.Product
 {
     public interface IProductRepository
     {

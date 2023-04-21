@@ -4,16 +4,17 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace OrdSYS.Models
+namespace OrdSYS.Models.Product
 {
     public class ProductModel
     {
         // Fields
         private int _id;
         private string _name;
+        private string _description;
         private decimal _price;
         private int _stock;
-        private string _status;
+        private char _status;
 
         // Properties - Validations
         [DisplayName("Product ID")]
@@ -22,6 +23,9 @@ namespace OrdSYS.Models
         [DisplayName("Product Name")]
         [Required(ErrorMessage = "Product Name is required")]
         public string Name { get => _name; set => _name = value; }
+        [DisplayName("Product Description")]
+        [Required(ErrorMessage = "Product Description is required")]
+        public string Description { get => _description; set => _description = value; }
         [DisplayName("Product Price")]
         [Required(ErrorMessage = "Product Price is required")]
         public decimal Price { get => _price; set => _price = value; }
@@ -30,6 +34,6 @@ namespace OrdSYS.Models
         public int Stock { get => _stock; set => _stock = value; }
         [DisplayName("Product Status")]
         [Required(ErrorMessage = "Product Status is required")]
-        public string Status { get => _status; set => _status = value; }
+        public char Status { get => _status; set => _status = value; }
     }
 }

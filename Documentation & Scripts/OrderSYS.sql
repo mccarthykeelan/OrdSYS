@@ -1,5 +1,6 @@
 CREATE TABLE Customers (
     customer_id NUMBER,
+    username VARCHAR2(50),
     first_name VARCHAR2(50),
     last_name VARCHAR2(50),
     email VARCHAR2(50) UNIQUE,
@@ -10,6 +11,17 @@ CREATE TABLE Customers (
     eircode VARCHAR2(10),
     account_status VARCHAR2(20),
     CONSTRAINT pk_customer PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE Administrators (
+    admin_id NUMBER,
+    username VARCHAR2(50),
+    first_name VARCHAR2(50),
+    last_name VARCHAR2(50),
+    email VARCHAR2(50) UNIQUE,
+    account_status VARCHAR2(20),
+    is_root char(1),
+    CONSTRAINT pk_administrator PRIMARY KEY (admin_id)
 );
 
 CREATE TABLE Orders (
@@ -25,9 +37,10 @@ CREATE TABLE Orders (
 CREATE TABLE Products (
     product_id NUMBER,
     product_name VARCHAR2(50),
+    product_description VARCHAR(50),
     price NUMBER(10,2),
     quantity_available NUMBER,
-    product_status VARCHAR2(20),
+    is_available char(1),
     CONSTRAINT pk_product PRIMARY KEY (product_id)
 );
 
@@ -40,14 +53,4 @@ CREATE TABLE Order_items (
     CONSTRAINT pk_order_item PRIMARY KEY (order_item_id),
     CONSTRAINT fk_order_order_item FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     CONSTRAINT fk_product_order_item FOREIGN KEY (product_id) REFERENCES Products(product_id)
-);
-
-CREATE TABLE Statements (
-    statement_id NUMBER,
-    customer_id NUMBER,
-    start_date DATE,
-    end_date DATE,
-    total_spend NUMBER(10,2),
-    CONSTRAINT pk_statement PRIMARY KEY (statement_id),
-    CONSTRAINT fk_customer_statement FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );

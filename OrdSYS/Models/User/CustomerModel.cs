@@ -4,7 +4,7 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace OrdSYS.Models
+namespace OrdSYS.Models.User
 {
     public class CustomerModel
     {

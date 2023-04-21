@@ -63,8 +63,9 @@
             pnlMenu.Controls.Add(pnlLogo);
             pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             pnlMenu.Location = new System.Drawing.Point(0, 0);
+            pnlMenu.Margin = new System.Windows.Forms.Padding(2);
             pnlMenu.Name = "pnlMenu";
-            pnlMenu.Size = new System.Drawing.Size(437, 1117);
+            pnlMenu.Size = new System.Drawing.Size(308, 817);
             pnlMenu.TabIndex = 0;
             // 
             // btnLogs
@@ -74,10 +75,11 @@
             btnLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnLogs.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnLogs.ForeColor = System.Drawing.Color.White;
-            btnLogs.Location = new System.Drawing.Point(0, 718);
+            btnLogs.Location = new System.Drawing.Point(0, 525);
+            btnLogs.Margin = new System.Windows.Forms.Padding(2);
             btnLogs.Name = "btnLogs";
-            btnLogs.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            btnLogs.Size = new System.Drawing.Size(437, 108);
+            btnLogs.Padding = new System.Windows.Forms.Padding(42, 0, 0, 0);
+            btnLogs.Size = new System.Drawing.Size(308, 79);
             btnLogs.TabIndex = 7;
             btnLogs.Text = "View Logs";
             btnLogs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,10 +93,11 @@
             btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnUsers.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnUsers.ForeColor = System.Drawing.Color.White;
-            btnUsers.Location = new System.Drawing.Point(0, 610);
+            btnUsers.Location = new System.Drawing.Point(0, 446);
+            btnUsers.Margin = new System.Windows.Forms.Padding(2);
             btnUsers.Name = "btnUsers";
-            btnUsers.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            btnUsers.Size = new System.Drawing.Size(437, 108);
+            btnUsers.Padding = new System.Windows.Forms.Padding(42, 0, 0, 0);
+            btnUsers.Size = new System.Drawing.Size(308, 79);
             btnUsers.TabIndex = 6;
             btnUsers.Text = "Manage Users";
             btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,9 +112,10 @@
             btnExit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnExit.ForeColor = System.Drawing.Color.White;
             btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnExit.Location = new System.Drawing.Point(0, 1009);
+            btnExit.Location = new System.Drawing.Point(0, 738);
+            btnExit.Margin = new System.Windows.Forms.Padding(2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new System.Drawing.Size(437, 108);
+            btnExit.Size = new System.Drawing.Size(308, 79);
             btnExit.TabIndex = 5;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
@@ -124,10 +128,11 @@
             btnStatements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnStatements.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnStatements.ForeColor = System.Drawing.Color.White;
-            btnStatements.Location = new System.Drawing.Point(0, 502);
+            btnStatements.Location = new System.Drawing.Point(0, 367);
+            btnStatements.Margin = new System.Windows.Forms.Padding(2);
             btnStatements.Name = "btnStatements";
-            btnStatements.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            btnStatements.Size = new System.Drawing.Size(437, 108);
+            btnStatements.Padding = new System.Windows.Forms.Padding(42, 0, 0, 0);
+            btnStatements.Size = new System.Drawing.Size(308, 79);
             btnStatements.TabIndex = 3;
             btnStatements.Text = "Statements";
             btnStatements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,10 +146,11 @@
             btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnOrders.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnOrders.ForeColor = System.Drawing.Color.White;
-            btnOrders.Location = new System.Drawing.Point(0, 394);
+            btnOrders.Location = new System.Drawing.Point(0, 288);
+            btnOrders.Margin = new System.Windows.Forms.Padding(2);
             btnOrders.Name = "btnOrders";
-            btnOrders.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            btnOrders.Size = new System.Drawing.Size(437, 108);
+            btnOrders.Padding = new System.Windows.Forms.Padding(42, 0, 0, 0);
+            btnOrders.Size = new System.Drawing.Size(308, 79);
             btnOrders.TabIndex = 2;
             btnOrders.Text = "Orders";
             btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,10 +164,11 @@
             btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnProducts.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnProducts.ForeColor = System.Drawing.Color.White;
-            btnProducts.Location = new System.Drawing.Point(0, 286);
+            btnProducts.Location = new System.Drawing.Point(0, 209);
+            btnProducts.Margin = new System.Windows.Forms.Padding(2);
             btnProducts.Name = "btnProducts";
-            btnProducts.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            btnProducts.Size = new System.Drawing.Size(437, 108);
+            btnProducts.Padding = new System.Windows.Forms.Padding(42, 0, 0, 0);
+            btnProducts.Size = new System.Drawing.Size(308, 79);
             btnProducts.TabIndex = 1;
             btnProducts.Text = "Products";
             btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,8 +181,9 @@
             pnlLogo.Controls.Add(picLogo);
             pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             pnlLogo.Location = new System.Drawing.Point(0, 0);
+            pnlLogo.Margin = new System.Windows.Forms.Padding(2);
             pnlLogo.Name = "pnlLogo";
-            pnlLogo.Size = new System.Drawing.Size(437, 286);
+            pnlLogo.Size = new System.Drawing.Size(308, 209);
             pnlLogo.TabIndex = 0;
             // 
             // lblUsername
@@ -185,9 +193,10 @@
             lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             lblUsername.ForeColor = System.Drawing.Color.White;
             lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            lblUsername.Location = new System.Drawing.Point(97, 214);
+            lblUsername.Location = new System.Drawing.Point(68, 157);
+            lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new System.Drawing.Size(240, 54);
+            lblUsername.Size = new System.Drawing.Size(170, 38);
             lblUsername.TabIndex = 2;
             lblUsername.Text = "USERNAME";
             lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,8 +206,9 @@
             picLogo.Dock = System.Windows.Forms.DockStyle.Top;
             picLogo.Image = (System.Drawing.Image)resources.GetObject("picLogo.Image");
             picLogo.Location = new System.Drawing.Point(0, 0);
+            picLogo.Margin = new System.Windows.Forms.Padding(2);
             picLogo.Name = "picLogo";
-            picLogo.Size = new System.Drawing.Size(437, 202);
+            picLogo.Size = new System.Drawing.Size(308, 148);
             picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             picLogo.TabIndex = 1;
             picLogo.TabStop = false;
@@ -209,9 +219,10 @@
             pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(31, 30, 68);
             pnlTitleBar.Controls.Add(lblChildForm);
             pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            pnlTitleBar.Location = new System.Drawing.Point(437, 0);
+            pnlTitleBar.Location = new System.Drawing.Point(308, 0);
+            pnlTitleBar.Margin = new System.Windows.Forms.Padding(2);
             pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new System.Drawing.Size(1423, 126);
+            pnlTitleBar.Size = new System.Drawing.Size(1005, 92);
             pnlTitleBar.TabIndex = 1;
             pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
             // 
@@ -221,9 +232,10 @@
             lblChildForm.AutoSize = true;
             lblChildForm.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             lblChildForm.ForeColor = System.Drawing.Color.White;
-            lblChildForm.Location = new System.Drawing.Point(650, 40);
+            lblChildForm.Location = new System.Drawing.Point(459, 29);
+            lblChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblChildForm.Name = "lblChildForm";
-            lblChildForm.Size = new System.Drawing.Size(160, 62);
+            lblChildForm.Size = new System.Drawing.Size(113, 45);
             lblChildForm.TabIndex = 0;
             lblChildForm.Text = "Home";
             lblChildForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,9 +244,10 @@
             // 
             pnlDesktop.Controls.Add(picOrderSYS);
             pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            pnlDesktop.Location = new System.Drawing.Point(437, 126);
+            pnlDesktop.Location = new System.Drawing.Point(308, 92);
+            pnlDesktop.Margin = new System.Windows.Forms.Padding(2);
             pnlDesktop.Name = "pnlDesktop";
-            pnlDesktop.Size = new System.Drawing.Size(1423, 991);
+            pnlDesktop.Size = new System.Drawing.Size(1005, 725);
             pnlDesktop.TabIndex = 2;
             // 
             // picOrderSYS
@@ -242,20 +255,23 @@
             picOrderSYS.Dock = System.Windows.Forms.DockStyle.Fill;
             picOrderSYS.Image = Properties.Resources.OrderSYS;
             picOrderSYS.Location = new System.Drawing.Point(0, 0);
+            picOrderSYS.Margin = new System.Windows.Forms.Padding(2);
             picOrderSYS.Name = "picOrderSYS";
-            picOrderSYS.Size = new System.Drawing.Size(1423, 991);
+            picOrderSYS.Size = new System.Drawing.Size(1005, 725);
             picOrderSYS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             picOrderSYS.TabIndex = 0;
             picOrderSYS.TabStop = false;
             // 
             // frmMainMenu
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
+            AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1860, 1117);
+            ClientSize = new System.Drawing.Size(1313, 817);
             Controls.Add(pnlDesktop);
             Controls.Add(pnlTitleBar);
             Controls.Add(pnlMenu);
+            IsMdiContainer = true;
+            Margin = new System.Windows.Forms.Padding(2);
             Name = "frmMainMenu";
             Text = "frmMainMenu";
             pnlMenu.ResumeLayout(false);

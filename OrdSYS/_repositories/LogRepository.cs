@@ -1,4 +1,4 @@
-﻿using OrdSYS.Models;
+﻿using OrdSYS.Models.Log;
 using System;
 using System.Collections.Generic;
 using System.Text;

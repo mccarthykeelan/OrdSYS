@@ -4,7 +4,7 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace OrdSYS.Models
+namespace OrdSYS.Models.Order
 {
     public class OrderModel
     {
@@ -12,7 +12,7 @@ namespace OrdSYS.Models
         private int _id;
         private int _customerId;
         private DateTime _date;
-        private string _status;
+        private char _status;
         private decimal _total;
 
         // Properties - Validations
@@ -27,7 +27,7 @@ namespace OrdSYS.Models
         public DateTime Date { get => _date; set => _date = value; }
         [DisplayName("Order Status")]
         [Required(ErrorMessage = "Order Status is required")]
-        public string Status { get => _status; set => _status = value; }
+        public char Status { get => _status; set => _status = value; }
         [DisplayName("Order Total")]
         [Required(ErrorMessage = "Order Total is required")]
         public decimal Total { get => _total; set => _total = value; }

@@ -6,14 +6,17 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using OrdSYS.Views;
 
 namespace OrdSYS
 {
-    public partial class frmMainMenu : Form
+    public partial class frmMainMenu : Form, IMainView
     {
         private Button currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+
+        public event EventHandler ShowProductView;
 
         public frmMainMenu()
         {
@@ -26,6 +29,7 @@ namespace OrdSYS
             //this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            btnProducts.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
         }
 
         private void ActivateButton(object senderBtn, Color color)
@@ -43,7 +47,7 @@ namespace OrdSYS
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-                
+
             }
         }
 

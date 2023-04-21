@@ -1,5 +1,5 @@
 ﻿using Oracle.ManagedDataAccess.Client;
-using OrdSYS.Models;
+using OrdSYS.Models.Product;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -66,7 +66,7 @@ namespace OrdSYS._repositories
             using (OracleCommand cmd = con.CreateCommand())
             {
                 con.Open();
-                cmd.CommandText = "SELECT * FROM PRODUCTS ORDER BY PET_ID DESC";
+                cmd.CommandText = "SELECT * FROM PRODUCTS ORDER BY PRODUCT_ID DESC";
                 using (OracleDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -74,9 +74,11 @@ namespace OrdSYS._repositories
                         var product = new ProductModel();
                         product.Id = reader.GetInt32(0);
                         product.Name = reader.GetString(1);
-                        product.Price = reader.GetDecimal(2);
-                        product.Stock = reader.GetInt32(3);
-                        product.Status = reader.GetString(4);
+                        product.Description = reader.GetString(2);
+                        product.Price = reader.GetDecimal(3);
+                        product.Stock = reader.GetInt32(4);
+                        product.Status = Char.Parse(reader.GetString(5));
+
                         productList.Add(product);
                     }
                 }
@@ -109,7 +111,7 @@ namespace OrdSYS._repositories
                         product.Name = reader.GetString(1);
                         product.Price = reader.GetDecimal(2);
                         product.Stock = reader.GetInt32(3);
-                        product.Status = reader.GetString(4);
+                        product.Status = reader.GetChar(4);
                         productList.Add(product);
                     }
                     reader.Close();

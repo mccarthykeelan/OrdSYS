@@ -1,5 +1,8 @@
+using OrdSYS.Presenters;
+using OrdSYS.Views;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +20,10 @@ namespace OrdSYS
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainMenu());
+            String sqlConnection = ConfigurationManager.ConnectionStrings["OrdSYS.Properties.Settings.sqlConnection"].ConnectionString;
+            IMainView view = new frmMainMenu();
+            new MainPresenter(view, sqlConnection);
+            Application.Run((Form)view);
         }
     }
 }

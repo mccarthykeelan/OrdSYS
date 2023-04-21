@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OrdSYS.Views
+namespace OrdSYS.Views.Order
 {
     public interface IOrderView
     {
         // Properties
         string OrderID { get; set; }
         string CustomerID { get; set; }
-        DateTime? CreatedDate { get; set; }
+        DateTime? OrderDate { get; set; }
         string status { get; set; }
         decimal Total { get; set; }
 

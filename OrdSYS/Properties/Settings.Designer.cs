@@ -22,5 +22,17 @@ namespace OrdSYS.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONN" +
+            "ECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User ID=c##ordersys;Password=1231" +
+            "23;")]
+        public string sqlConnection {
+            get {
+                return ((string)(this["sqlConnection"]));
+            }
+        }
     }
 }
