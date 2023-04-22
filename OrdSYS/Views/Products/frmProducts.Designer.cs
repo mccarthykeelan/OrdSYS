@@ -1,7 +1,7 @@
 ﻿
 namespace OrdSYS
 {
-    partial class frmOrders
+    partial class frmProducts
     {
         /// <summary>
         /// Required designer variable.

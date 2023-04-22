@@ -7,6 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using OrdSYS.Views;
+using OrdSYS.Views.User;
+using OrdSYS.Views.Logs;
+using OrdSYS.Views.Order;
 
 namespace OrdSYS
 {
@@ -17,6 +20,11 @@ namespace OrdSYS
         private Form currentChildForm;
 
         public event EventHandler ShowProductView;
+        public event EventHandler ShowOrderView;
+        public event EventHandler ShowLogView;
+        public event EventHandler ShowUserView;
+        public event EventHandler ShowAdminView;
+        public event EventHandler ShowCustomerView;
 
         public frmMainMenu()
         {
@@ -141,17 +149,19 @@ namespace OrdSYS
         private void btnOrders_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new frmProducts());
+            OpenChildForm(new frmOrders());
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
+            OpenChildForm(new frmCustomers());
         }
 
         private void btnLogs_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new frmLogs());
         }
 
         private void picLogo_Click_1(object sender, EventArgs e)

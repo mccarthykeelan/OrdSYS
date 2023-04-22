@@ -1,9 +1,7 @@
 ﻿using OrdSYS.Models.Order;
-using OrdSYS.Models.Product;
-using OrdSYS.Views.Product;
+using OrdSYS.Views.Order;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
 
 namespace OrdSYS.Presenters
@@ -11,14 +9,15 @@ namespace OrdSYS.Presenters
     public class OrderPresenter
     {
         // Private
-        private IProductView _view;
-        private IProductRepository _repository;
+        private IOrderView _view;
+        private IOrderRepository _repository;
         private BindingSource ordersBindingSource;
         private IEnumerable<OrderModel> orderList;
 
         // Constructor
         public OrderPresenter(IOrderView view, IOrderRepository repository)
         {
+
             this.ordersBindingSource = new BindingSource();
             this._view = view;
             this._repository = repository;
@@ -37,7 +36,8 @@ namespace OrdSYS.Presenters
             this._view.Show();
         }
 
-        private void LoadAllOrderList()
+
+        private void LoadAllOrdersList()
         {
             orderList = _repository.GetAll();
             ordersBindingSource.DataSource = orderList; // Set Data Source
@@ -51,10 +51,10 @@ namespace OrdSYS.Presenters
         private void SaveOrder(object sender, EventArgs e)
         {
             var model = new OrderModel();
-            model.Id = Convert.ToInt32(_view.OrderId);
+            model.Id = Convert.ToInt32(_view.OrderID);
             model.CustomerId = Convert.ToInt32(_view.CustomerID);
             model.Date = System.DateTime.Now;
-            model.Status = _view.ProductStatus;
+            model.Status = _view.Status;
             try
             {
                 new Models.Common.ModelDataValidation().Validate(model);
@@ -69,7 +69,7 @@ namespace OrdSYS.Presenters
                     _view.Message = "Product added successfully.";
                 }
                 _view.IsSuccessful = true;
-                LoadAllProductList();
+                LoadAllOrdersList();
                 CleanViewFields();
             }
             catch (Exception ex)
@@ -81,60 +81,58 @@ namespace OrdSYS.Presenters
 
         private void CleanViewFields()
         {
-            _view.ProductId = "0";
-            _view.ProductName = "";
-            _view.ProductDescription = "";
-            _view.ProductPrice = 0;
-            _view.ProductStock = 0;
-            _view.ProductStatus = '\0';
+            _view.OrderID = "0";
+            _view.CustomerID = "";
+            _view.Date = DateTime.Now;
+            _view.Status = '\0';
+            _view.Total = 0;
         }
 
-        private void DeleteProduct(object sender, EventArgs e)
+        private void DeleteOrder(object sender, EventArgs e)
         {
             try
             {
-                var product = (ProductModel)productsBindingSource.Current;
-                _repository.Delete(product.Id);
+                var order = (OrderModel)ordersBindingSource.Current;
+                _repository.Delete(order.Id);
                 _view.IsSuccessful = true;
-                _view.Message = "Products deleted successfully";
-                LoadAllProductList();
+                _view.Message = "Order deleted successfully";
+                LoadAllOrdersList();
             }
             catch (Exception ex)
             {
                 _view.IsSuccessful = false;
-                _view.Message = "An error ocurred, could not delete product" + ex.Message;
+                _view.Message = "An error ocurred, could not delete order" + ex.Message;
             }
         }
 
-        private void LoadSelectedProductToEdit(object sender, EventArgs e)
+        private void LoadSelectedOrderToEdit(object sender, EventArgs e)
         {
-            var product = (ProductModel)productsBindingSource.Current;
-            _view.ProductId = product.Id.ToString();
-            _view.ProductName = product.Name;
-            _view.ProductDescription = product.Description;
-            _view.ProductPrice = product.Price;
-            _view.ProductStock = product.Stock;
-            _view.ProductStatus = product.Status;
+            var order = (OrderModel)ordersBindingSource.Current;
+            _view.OrderID = order.Id.ToString();
+            _view.CustomerID = order.CustomerId.ToString();
+            _view.Date = order.Date;
+            _view.Status = order.Status;
+            _view.Total = order.Total;
             _view.IsEdit = true;
         }
 
-        private void AddProduct(object sender, EventArgs e)
+        private void AddOrder(object sender, EventArgs e)
         {
             _view.IsEdit = false;
         }
 
-        private void SearchProduct(object sender, EventArgs e)
+        private void SearchOrder(object sender, EventArgs e)
         {
             bool emptyValue = string.IsNullOrEmpty(this._view.SearchValue);
             if (emptyValue == false)
             {
-                productList = _repository.GetByValue(this._view.SearchValue);
+                orderList = _repository.GetByValue(this._view.SearchValue);
             }
             else
             {
-                productList = _repository.GetAll();
+                orderList = _repository.GetAll();
             }
-            productsBindingSource.DataSource = productList;
+            ordersBindingSource.DataSource = orderList;
         }
     }
 }

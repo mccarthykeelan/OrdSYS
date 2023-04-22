@@ -10,13 +10,13 @@ namespace OrdSYS.Views.Order
         // Properties
         string OrderID { get; set; }
         string CustomerID { get; set; }
-        DateTime? OrderDate { get; set; }
-        string status { get; set; }
+        DateTime? Date { get; set; }
+        char Status { get; set; }
         decimal Total { get; set; }
 
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
-        bool IsSuccessfull { get; set; }
+        bool IsSuccessful { get; set; }
         string Message { get; set; }
 
         // Events

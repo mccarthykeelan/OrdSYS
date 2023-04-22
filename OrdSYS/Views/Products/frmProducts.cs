@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace OrdSYS
 {
-    public partial class frmOrders : Form, IProductView
+    public partial class frmProducts : Form, IProductView
     {
         private string _message;
         private bool _isSuccessful;
         private bool _isEdit;
 
-        public frmOrders()
+        public frmProducts()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
@@ -135,8 +135,8 @@ namespace OrdSYS
         public event EventHandler CancelEvent;
         public event EventHandler AddNewEvent;
 
-        public static frmOrders instance;
-        public static frmOrders GetInstance(Form parentContainer)
+        public static frmProducts instance;
+        public static frmProducts GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
             {

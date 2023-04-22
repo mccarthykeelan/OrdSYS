@@ -7,5 +7,9 @@ namespace OrdSYS.Views
     public interface IMainView
     {
         event EventHandler ShowProductView;
+        event EventHandler ShowOrderView;
+        event EventHandler ShowLogView;
+        event EventHandler ShowAdminView;
+        event EventHandler ShowCustomerView;
     }
 }

@@ -6,8 +6,8 @@ namespace OrdSYS.Models.Product
 {
     public interface IProductRepository
     {
-        void Add(ProductModel petModel);
-        void Edit(ProductModel petModel);
+        void Add(ProductModel productModel);
+        void Edit(ProductModel productModel);
         void Delete(int id);
         IEnumerable<ProductModel> GetAll();
         IEnumerable<ProductModel> GetByValue(string value);//Searches

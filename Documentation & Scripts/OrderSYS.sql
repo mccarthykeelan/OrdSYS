@@ -1,6 +1,7 @@
 CREATE TABLE Customers (
     customer_id NUMBER,
     username VARCHAR2(50),
+    password VARCHAR2(50),
     first_name VARCHAR2(50),
     last_name VARCHAR2(50),
     email VARCHAR2(50) UNIQUE,
@@ -19,6 +20,7 @@ CREATE TABLE Administrators (
     first_name VARCHAR2(50),
     last_name VARCHAR2(50),
     email VARCHAR2(50) UNIQUE,
+    password VARCHAR2(50),
     account_status VARCHAR2(20),
     is_root char(1),
     CONSTRAINT pk_administrator PRIMARY KEY (admin_id)

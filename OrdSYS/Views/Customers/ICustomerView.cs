@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrdSYS.Models.Customer;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
@@ -9,6 +10,7 @@ namespace OrdSYS.Views.Customer
     {
         //Properties - Fields
         string CustomerID { get; set; }
+        string Username { get; set; }
         string FirstName { get; set; }
         string LastName { get; set; }
         string Email { get; set; }
@@ -17,7 +19,7 @@ namespace OrdSYS.Views.Customer
         string City { get; set; }
         string County { get; set; }
         string Eircode { get; set; }
-        string AccountStatus { get; set; }
+        char AccountStatus { get; set; }
         string AccountType { get; set; }
         string Password { get; set; }
         string DateCreated { get; set; }
@@ -39,5 +41,6 @@ namespace OrdSYS.Views.Customer
         //Methods
         void SetCustomerListBindingSource(BindingSource customerList);
         void Show();
+        void SetCustomerListBindingSource(IEnumerable<CustomerModel> customerList);
     }
 }
