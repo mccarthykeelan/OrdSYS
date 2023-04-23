@@ -29,6 +29,7 @@ namespace OrdSYS
         public frmMainMenu()
         {
             InitializeComponent();
+            btnProducts.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(14, 108);
             pnlMenu.Controls.Add(leftBorderBtn);
@@ -37,7 +38,7 @@ namespace OrdSYS
             //this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            btnProducts.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
+
         }
 
         private void ActivateButton(object senderBtn, Color color)

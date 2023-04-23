@@ -82,7 +82,7 @@ namespace OrdSYS.Presenters
 
         private void CleanViewFields()
         {
-            _view.ProductId = "0";
+            _view.ProductId = 0;
             _view.ProductName = "";
             _view.ProductDescription = "";
             _view.ProductPrice = 0;
@@ -110,7 +110,7 @@ namespace OrdSYS.Presenters
         private void LoadSelectedProductToEdit(object sender, EventArgs e)
         {
             var product = (ProductModel)productsBindingSource.Current;
-            _view.ProductId = product.Id.ToString();
+            _view.ProductId = product.Id;
             _view.ProductName = product.Name;
             _view.ProductDescription = product.Description;
             _view.ProductPrice = product.Price;

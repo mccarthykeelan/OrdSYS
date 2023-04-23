@@ -79,10 +79,10 @@ namespace OrdSYS
             };
         }
 
-        public string ProductId
+        public int ProductId
         {
-            get { return txtProductID.Text; }
-            set { txtProductID.Text = value; }
+            get { return Convert.ToInt32(txtProductID.Text); }
+            set { txtProductID.Text = value.ToString(); }
         }
         public string ProductName
         {

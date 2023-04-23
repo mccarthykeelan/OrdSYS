@@ -8,7 +8,7 @@ namespace OrdSYS.Views.Product
     public interface IProductView
     {
         // Properties
-        string ProductId { get; set; }
+        int ProductId { get; set; }
         string ProductName { get; set; }
         string ProductDescription { get; set; }
         decimal ProductPrice { get; set; }
